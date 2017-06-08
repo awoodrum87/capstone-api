@@ -9,6 +9,11 @@ class QuotesController < OpenReadController
     render json: @quotes
   end
 
+  def my_quotes
+    @myquotes = current_user.quotes
+    render json: @myquotes
+  end
+
   # GET /quotes/1
   # GET /quotes/1.json
   def show
