@@ -2,10 +2,9 @@
 
 # Capstone-API documentation
 
-[Link to Deployed Application](https://awoodrum87.github.io/capstone-client/index.html)
-
-[Link to Deployed Heroku App](https://quiet-island-36585.herokuapp.com/)
-[Link to Client Documentation](https://github.com/awoodrum87/capstone-client)
+- [Link to Deployed Application](https://awoodrum87.github.io/capstone-client/index.html)
+- [Link to Deployed Heroku App](https://quiet-island-36585.herokuapp.com/)
+- [Link to Client Documentation](https://github.com/awoodrum87/capstone-client)
 
 ## Dependencies
 Install with bundle install.
@@ -18,6 +17,27 @@ Install with bundle install.
 
 ## ERD
 https://goo.gl/photos/EvsBimgCCCRs1d7c9
+
+## Routes
+
+Authentication
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| PATCH  | `/change-password/:id` | `users#changepw`  |
+| DELETE | `/sign-out/:id`        | `users#signout`   |
+
+Quotes
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/quotes`              | `quotes#create`   |
+| PATCH  | `/quotes/:id`          | `quotes#update`   |
+| DELETE | `/quotes/:id`          | `quotes#destroy`  |
+| GET    | `/quotes`              | `quotes#index`    |
+| GET    | `/my-quotes/`          | `quotes#my-quotes`
 
 
 ## [License](LICENSE)
